@@ -15,7 +15,8 @@ public class App implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-        .allowedOrigins("http://localhost:3000")
+        .allowedOrigins("http://localhost:3000",
+                "https://expensetracker-1y3i.onrender.com")
         .allowCredentials(true)
         .allowedMethods("GET", "POST", "PUT", "DELETE")  
         .allowedHeaders("*"); 

@@ -1,3 +1,16 @@
+com\expenseTracker\filters\JwtAuthenticationFilter.class
+com\expenseTracker\services\UserService.class
 com\expenseTracker\App.class
-com\expenseTracker\controllers\CategoryController.class
+com\expenseTracker\repositories\CategoryRepository.class
+com\expenseTracker\services\CategoryService.class
+com\expenseTracker\models\Expenses.class
+com\expenseTracker\repositories\UserRepository.class
 com\expenseTracker\controllers\UserController.class
+com\expenseTracker\controllers\ExpenseController.class
+com\expenseTracker\services\JwtUtils.class
+com\expenseTracker\controllers\CategoryController.class
+com\expenseTracker\models\Category.class
+com\expenseTracker\models\User.class
+com\expenseTracker\services\UserService$1.class
+com\expenseTracker\repositories\ExpenseRepository.class
+com\expenseTracker\services\ExpenseService.class
