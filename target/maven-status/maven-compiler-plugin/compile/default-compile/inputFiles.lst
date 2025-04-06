@@ -1,6 +1,15 @@
+D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\filters\JwtAuthenticationFilter.java
 D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\models\User.java
+D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\services\CategoryService.java
 D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\App.java
+D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\services\ExpenseService.java
+D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\controllers\CategoryController.java
+D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\models\Category.java
+D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\models\Expenses.java
+D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\repositories\ExpenseRepository.java
+D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\services\JwtUtils.java
 D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\repositories\UserRepository.java
+D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\repositories\CategoryRepository.java
 D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\controllers\ExpenseController.java
 D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\services\UserService.java
 D:\expense_tracker\ExpenseTracker\src\main\java\com\expenseTracker\controllers\UserController.java
