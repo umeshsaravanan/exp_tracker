@@ -29,13 +29,9 @@ public class JwtAuthenticationFilter implements Filter {
 
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
+        String path = httpRequest.getRequestURI();
         
-        if (isAllowedPath(httpRequest.getRequestURI())) {
-            chain.doFilter(request, response);  // Skip token validation and move to next filter
-            return;
-        }
-        
-        if ("OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
+        if (!path.startsWith("/api/") || isAllowedPath(path) || "OPTIONS".equalsIgnoreCase(httpRequest.getMethod())) {
             chain.doFilter(request, response);
             return;
         }
