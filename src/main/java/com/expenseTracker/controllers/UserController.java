@@ -62,6 +62,12 @@ public class UserController {
         }
     }
     
+    @PostMapping("/logout")
+    public ResponseEntity<String> logout(HttpServletResponse response){
+    	removeToken(response);
+    	return new ResponseEntity<>("logout success", HttpStatus.OK);
+    }
+    
     @PostMapping("/google")
     public ResponseEntity<Map<String, String>> loginUserByGoogle(@RequestBody Map<String, String> requestBody, HttpServletResponse response) {
         try {
@@ -117,6 +123,23 @@ public class UserController {
         userIdCookie.setSecure(true); 
         userIdCookie.setPath("/"); 
         userIdCookie.setMaxAge(60 * 60 * 1000); 
+
+        response.addCookie(userIdCookie);
+    }
+    
+    private void removeToken(HttpServletResponse response) {
+
+        Cookie jwtTokenCookie = new Cookie("jwtToken", "");
+        jwtTokenCookie.setSecure(true); 
+        jwtTokenCookie.setPath("/"); 
+        jwtTokenCookie.setMaxAge(0); 
+
+        response.addCookie(jwtTokenCookie);
+        
+        Cookie userIdCookie = new Cookie("userId", "");
+        userIdCookie.setSecure(true); 
+        userIdCookie.setPath("/"); 
+        userIdCookie.setMaxAge(0); 
 
         response.addCookie(userIdCookie);
     }
