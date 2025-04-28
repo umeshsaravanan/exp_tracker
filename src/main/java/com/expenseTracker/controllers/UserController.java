@@ -115,14 +115,14 @@ public class UserController {
         Cookie jwtTokenCookie = new Cookie("jwtToken", jwt);
         jwtTokenCookie.setSecure(true); 
         jwtTokenCookie.setPath("/"); 
-        jwtTokenCookie.setMaxAge(60 * 60 * 1000); 
+        jwtTokenCookie.setMaxAge(60 * 60); 
 
         response.addCookie(jwtTokenCookie);
         
         Cookie userIdCookie = new Cookie("userId", user.getId() + "");
         userIdCookie.setSecure(true); 
         userIdCookie.setPath("/"); 
-        userIdCookie.setMaxAge(60 * 60 * 1000); 
+        userIdCookie.setMaxAge(60 * 60); 
 
         response.addCookie(userIdCookie);
     }
