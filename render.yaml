@@ -1,0 +1,25 @@
+# Blueprint: https://render.com/docs/blueprint-spec
+# After push: Render Dashboard → New → Blueprint → connect repo (or attach this file to an existing service).
+
+databases:
+  - name: expense-db
+    databaseName: expense_tracker
+    user: expense
+
+services:
+  - type: web
+    name: expensetracker
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: expense-db
+          property: connectionString
+      - key: SPRING_JPA_DATABASE_PLATFORM
+        value: org.hibernate.dialect.PostgreSQLDialect
+      - key: SPRING_JPA_SHOW_SQL
+        value: "false"

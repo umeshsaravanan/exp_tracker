@@ -9,6 +9,7 @@ com\expenseTracker\controllers\UserController.class
 com\expenseTracker\controllers\ExpenseController.class
 com\expenseTracker\services\JwtUtils.class
 com\expenseTracker\controllers\CategoryController.class
+com\expenseTracker\config\DataSourceConfig.class
 com\expenseTracker\models\Category.class
 com\expenseTracker\models\User.class
 com\expenseTracker\services\UserService$1.class
